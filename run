@@ -1,0 +1,3 @@
+rm main
+#gcc -Wall -g main.c -o main -I/usr/local/cuda/include -lOpenCL
+g++ -Wall -g main.c -o main -I/usr/local/cuda/include -lOpenCL
