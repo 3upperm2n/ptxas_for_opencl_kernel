@@ -81,7 +81,7 @@ int main(int argc, char* argv[])
 	time_t t;
 	srand((unsigned) time(&t));
 	int someRandNum = rand() % 100 + 200; // 200 to 299
-	sprintf(flags, "-cl-nv-maxrregcount=%d -cl-nv-verbose", someRandNum);
+	sprintf(flags, "-cl-nv-maxrregcount=%d -cl-nv-verbose", someRandNum); // randomn number is added to avoid empty log 
 	err = clBuildProgram(program, 1,  &device, flags, NULL, NULL);
 
 #if LOG 
