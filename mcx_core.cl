@@ -16,6 +16,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #pragma OPENCL EXTENSION cl_nv_compiler_options : enable
+//#pragma OPENCL EXTENSION all : enable 
 
 #ifdef MCX_SAVE_DETECTORS
   #pragma OPENCL EXTENSION cl_khr_global_int32_base_atomics : enable
