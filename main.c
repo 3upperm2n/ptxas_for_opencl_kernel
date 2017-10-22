@@ -1,5 +1,6 @@
 #include <stdio.h> 
 #include <stdlib.h> 
+#include <string.h> // strstr
 #include <time.h>
 
 #ifdef __APPLE__
@@ -43,16 +44,27 @@ int main(int argc, char* argv[])
 
 	// notes: select 2nd platform in my case
 	int pid = 0;
-	if(num_platforms > 1) {
-	    pid = 1;
-	}
-	platform = platforms[pid];
 
 	// platform name
 	char *pltName=(char*) malloc(sizeof(char) * 256);
-	clGetPlatformInfo(platform, CL_PLATFORM_NAME, 256, (void*)pltName, NULL);
 
-	printf("select platform : %d (%s)\n", pid, pltName);
+	for(unsigned int i=0; i<num_platforms; i++)
+	{
+		platform = platforms[i];
+
+		clGetPlatformInfo(platform, CL_PLATFORM_NAME, 256, (void*)pltName, NULL);
+
+		printf("platform : %d (%s)\n", pid, pltName);
+
+		if(strstr(pltName,"NVIDIA") != NULL) {
+			printf("select current platform\n");
+			pid = i;
+			break;
+		}
+	}
+
+	platform = platforms[pid];
+	printf("Test on platform : %d (%s)\n", pid, pltName);
 
 	// get the gpu devices
 	err = clGetDeviceIDs(platform, CL_DEVICE_TYPE_GPU, 1, NULL, &num_devices);
@@ -62,8 +74,8 @@ int main(int argc, char* argv[])
 	err = clGetDeviceIDs(platform, CL_DEVICE_TYPE_GPU, num_devices, devices, NULL);
 
 	// GPU Info
-	//int gid = 0;
-	int gid = 1;
+	int gid = 0;
+	//int gid = 1;
 	char *gpuName=(char*) malloc(sizeof(char) * 256);
 	clGetDeviceInfo(devices[gid], CL_DEVICE_NAME, 256, (void*)gpuName,NULL);
 	printf("select gpu : %d  (%s)\n", gid, gpuName);
