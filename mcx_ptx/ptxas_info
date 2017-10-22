@@ -1,0 +1,65 @@
+ptxas info    : 4 bytes gmem, 64304 bytes cmem[2], 8 bytes cmem[14]
+ptxas info    : Compiling entry function '_Z13mcx_main_loopILi4EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi' for 'sm_20'
+ptxas info    : Function properties for _Z13mcx_main_loopILi4EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi
+16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 152 bytes cmem[0], 52 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13mcx_main_loopILi12EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi' for 'sm_20'
+ptxas info    : Function properties for _Z13mcx_main_loopILi12EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi
+16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 152 bytes cmem[0], 56 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13mcx_main_loopILi0EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi' for 'sm_20'
+ptxas info    : Function properties for _Z13mcx_main_loopILi0EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi
+16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 152 bytes cmem[0], 52 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13mcx_main_loopILi8EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi' for 'sm_20'
+ptxas info    : Function properties for _Z13mcx_main_loopILi8EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi
+16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 62 registers, 152 bytes cmem[0], 92 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13mcx_main_loopILi6EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi' for 'sm_20'
+ptxas info    : Function properties for _Z13mcx_main_loopILi6EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi
+16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 152 bytes cmem[0], 52 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13mcx_main_loopILi14EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi' for 'sm_20'
+ptxas info    : Function properties for _Z13mcx_main_loopILi14EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi
+16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 152 bytes cmem[0], 52 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13mcx_main_loopILi2EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi' for 'sm_20'
+ptxas info    : Function properties for _Z13mcx_main_loopILi2EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi
+16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 152 bytes cmem[0], 52 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13mcx_main_loopILi10EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi' for 'sm_20'
+ptxas info    : Function properties for _Z13mcx_main_loopILi10EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi
+24 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 62 registers, 152 bytes cmem[0], 52 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13mcx_main_loopILi3EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi' for 'sm_20'
+ptxas info    : Function properties for _Z13mcx_main_loopILi3EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi
+16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 62 registers, 152 bytes cmem[0], 92 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13mcx_main_loopILi11EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi' for 'sm_20'
+ptxas info    : Function properties for _Z13mcx_main_loopILi11EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi
+16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 152 bytes cmem[0], 52 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z12mcx_test_rngPfPj' for 'sm_20'
+ptxas info    : Function properties for _Z12mcx_test_rngPfPj
+0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 20 registers, 48 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z13mcx_main_loopILi7EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi' for 'sm_20'
+ptxas info    : Function properties for _Z13mcx_main_loopILi7EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi
+16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 152 bytes cmem[0], 52 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13mcx_main_loopILi5EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi' for 'sm_20'
+ptxas info    : Function properties for _Z13mcx_main_loopILi5EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi
+16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 152 bytes cmem[0], 52 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13mcx_main_loopILi13EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi' for 'sm_20'
+ptxas info    : Function properties for _Z13mcx_main_loopILi13EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi
+16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 152 bytes cmem[0], 56 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13mcx_main_loopILi1EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi' for 'sm_20'
+ptxas info    : Function properties for _Z13mcx_main_loopILi1EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi
+16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 152 bytes cmem[0], 52 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13mcx_main_loopILi9EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi' for 'sm_20'
+ptxas info    : Function properties for _Z13mcx_main_loopILi9EEvPjPfS1_S0_P6float4S3_S3_S1_S0_S1_S1_S1_PmS1_PVi
+24 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 62 registers, 152 bytes cmem[0], 52 bytes cmem[16]
