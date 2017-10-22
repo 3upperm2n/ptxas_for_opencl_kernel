@@ -15,9 +15,6 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#pragma OPENCL EXTENSION cl_nv_compiler_options : enable
-//#pragma OPENCL EXTENSION all : enable 
-
 #ifdef MCX_SAVE_DETECTORS
   #pragma OPENCL EXTENSION cl_khr_global_int32_base_atomics : enable
 #endif
@@ -160,18 +157,14 @@ static float xorshift128p_nextf (__private RandType t[RAND_BUF_LEN]){
    return (float)s1.d - 1.0f;
 }
 
-/*
 static void copystate(__private RandType t[RAND_BUF_LEN], __private RandType tnew[RAND_BUF_LEN]){
     tnew[0]=t[0];
     tnew[1]=t[1];
 }
-*/
 
-/*
 // generate random number for the next zenith angle
 static void rand_need_more(__private RandType t[RAND_BUF_LEN]){
 }
-*/
 
 static float rand_uniform01(__private RandType t[RAND_BUF_LEN]){
     return xorshift128p_nextf(t);
@@ -186,11 +179,8 @@ static void xorshift128p_seed (__global uint *seed,RandType t[RAND_BUF_LEN])
 static void gpu_rng_init(__private RandType t[RAND_BUF_LEN], __global uint *n_seed, int idx){
     xorshift128p_seed((n_seed+idx*RAND_SEED_LEN),t);
 }
-
-/*
 static void gpu_rng_reseed(__private RandType t[RAND_BUF_LEN],__global uint *cpuseed,uint idx,float reseed){
 }
-*/
 
 #endif
 
@@ -346,10 +336,10 @@ int launchnewphoton(float4 *p,float4 *v,float4 *f,float4 *prop,uint *idx1d,
 /*
    this is the core Monte Carlo simulation kernel, please see Fig. 1 in Fang2009
 */
-__kernel void mcx_main_loop(const int nphoton, const int ophoton,__global const uint* restrict media,
-     __global float* restrict field, __global float* restrict genergy, __global uint* restrict n_seed,
-     __global float* restrict n_det,__constant float4 *gproperty,
-     __constant float4 *gdetpos, __global uint* restrict stopsign,__global uint* restrict detectedphoton,
+__kernel void mcx_main_loop(const int nphoton, const int ophoton,__global const uint *media,
+     __global float *field, __global float *genergy, __global uint *n_seed,
+     __global float *n_det,__constant float4 *gproperty,
+     __constant float4 *gdetpos, __global uint *stopsign,__global uint *detectedphoton,
      __local float *sharedmem, __constant MCXParam *gcfg){
 
      int idx= get_global_id(0);
@@ -372,8 +362,7 @@ __kernel void mcx_main_loop(const int nphoton, const int ophoton,__global const 
      RandType t[RAND_BUF_LEN];
      float4 prop;    //can become float2 if no reflection
 
-     //float cphi,sphi,theta,stheta,ctheta,tmp0,tmp1;
-     float cphi,sphi,theta,stheta,ctheta,tmp0;
+     float cphi,sphi,theta,stheta,ctheta,tmp0,tmp1;
      float accumweight=0.f;
      float slen;
 
@@ -506,7 +495,7 @@ __kernel void mcx_main_loop(const int nphoton, const int ophoton,__global const 
                   *((float4*)(&prop))=gproperty[mediaid & MED_MASK]; // optical property across the interface
 
                   tmp0=n1*n1;
-                  float tmp1=prop.w*prop.w;
+                  tmp1=prop.w*prop.w;
                   cphi=fabs( (flipdir==0) ? v.x : (flipdir==1 ? v.y : v.z)); // cos(si)
                   sphi=1.f-cphi*cphi;            // sin(si)^2
 

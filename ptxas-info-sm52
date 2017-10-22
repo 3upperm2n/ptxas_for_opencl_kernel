@@ -1,0 +1,5 @@
+ptxas info    : 24 bytes gmem
+ptxas info    : Compiling entry function 'mcx_main_loop' for 'sm_52'
+ptxas info    : Function properties for mcx_main_loop
+ptxas         .     32 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 51 registers, 416 bytes cmem[0], 112 bytes cmem[2]

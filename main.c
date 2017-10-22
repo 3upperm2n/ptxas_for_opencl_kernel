@@ -42,7 +42,10 @@ int main(int argc, char* argv[])
 	clGetPlatformIDs(num_platforms, platforms, NULL);
 
 	// notes: select 2nd platform in my case
-	int pid = 1;
+	int pid = 0;
+	if(num_platforms > 1) {
+	    pid = 1;
+	}
 	platform = platforms[pid];
 
 	// platform name
@@ -59,7 +62,8 @@ int main(int argc, char* argv[])
 	err = clGetDeviceIDs(platform, CL_DEVICE_TYPE_GPU, num_devices, devices, NULL);
 
 	// GPU Info
-	int gid = 0;
+	//int gid = 0;
+	int gid = 1;
 	char *gpuName=(char*) malloc(sizeof(char) * 256);
 	clGetDeviceInfo(devices[gid], CL_DEVICE_NAME, 256, (void*)gpuName,NULL);
 	printf("select gpu : %d  (%s)\n", gid, gpuName);
@@ -93,8 +97,6 @@ int main(int argc, char* argv[])
 		program_log = (char*)malloc(log_size+1);
 		err = clGetProgramBuildInfo(program, device, CL_PROGRAM_BUILD_LOG, log_size, program_log, NULL);
 
-		// to be carefully, terminate with \0
-		// there's no information in the reference whether the string is 0 terminated or not
 		program_log[log_size] = '\0';
 
 		fprintf(stderr, "%s\n", program_log);
